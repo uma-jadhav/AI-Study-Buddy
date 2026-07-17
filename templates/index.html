@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Buddy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <header>
+        <h1>AI Study Buddy</h1>
+        <div class="cap-icon"><i class="fas fa-graduation-cap"></i></div>
+    </header>
+
+    <div class="container">
+        <!-- Section 1: Ask AI -->
+        <div class="card">
+            <h2><i class="fas fa-comment-dots" style="color: #3b82f6;"></i> Ask Anything</h2>
+            <input type="text" id="question" placeholder="Ask a question about Python, Science, Math...">
+            <button id="askBtn" class="btn"><i class="fas fa-paper-plane"></i> Ask AI</button>
+            <div id="output" class="output-box"></div>
+        </div>
+
+        <!-- Section 2: Summarize -->
+        <div class="card">
+            <h2><i class="fas fa-file-alt" style="color: #10b981;"></i> Summarize Notes</h2>
+            <textarea id="notes" rows="4" placeholder="Paste your long notes here to make them short..."></textarea>
+            <button id="summaryBtn" class="btn"><i class="fas fa-compress-alt"></i> Summarize</button>
+            <div id="summaryOutput" class="output-box"></div>
+        </div>
+
+        <!-- Section 3: Quiz -->
+        <div class="card">
+            <h2><i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Practice Quiz</h2>
+            <input type="text" id="topic" placeholder="Enter a topic (e.g., Photosynthesis, Loops)">
+            <button id="quizBtn" class="btn"><i class="fas fa-gamepad"></i> Generate Quiz</button>
+            <div id="quizOutput" class="output-box"></div>
+        </div>
+
+        <!-- Section 4: Tips -->
+        <div class="card">
+            <h2><i class="fas fa-star" style="color: #ec4899;"></i> Study Tips</h2>
+            <input type="text" id="subject" placeholder="Enter a subject name...">
+            <button id="tipsBtn" class="btn"><i class="fas fa-graduation-cap"></i> Get Tips</button>
+            <div id="tipsOutput" class="output-box"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built with by <strong>Uma Jadhav</strong> | AI Study Buddy</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
